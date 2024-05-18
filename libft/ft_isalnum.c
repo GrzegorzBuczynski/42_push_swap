@@ -1,26 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 17:58:11 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/18 17:12:16 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/02/28 19:52:19 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/03/16 16:31:04 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-#include <stdlib.h>
-#include <unistd.h>
-
-
-char *load_string(char *argv);
-char *load_items(int argc,char **argv);
-int ft_printresult(char *result);
-char *sort_stack(char **stack_a, char **stack_b);
-int	verify_string(char *str);
-//push_swap
-#endif
+int	ft_isalnum(int c)
+{
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0'
+			&& c <= '9'));
+}

@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 17:58:11 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/18 17:12:16 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/03/01 20:47:43 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/03/18 18:58:56 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-#include <stdlib.h>
-#include <unistd.h>
+char	*ft_strrchr(const char *s, int c)
+{
+	char	*ptr;
 
-
-char *load_string(char *argv);
-char *load_items(int argc,char **argv);
-int ft_printresult(char *result);
-char *sort_stack(char **stack_a, char **stack_b);
-int	verify_string(char *str);
-//push_swap
-#endif
+	ptr = NULL;
+	while (*s)
+	{
+		if (*s == (char)c)
+			ptr = (char *)s;
+		s++;
+	}
+	if (*s == (char)c)
+		return ((char *)s);
+	return (ptr);
+}

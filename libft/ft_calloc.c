@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 17:58:11 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/18 17:12:16 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/03/16 15:53:23 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/03/17 12:50:06 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
 #include <stdlib.h>
-#include <unistd.h>
 
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*ptr;
+	size_t	total_size;
 
-char *load_string(char *argv);
-char *load_items(int argc,char **argv);
-int ft_printresult(char *result);
-char *sort_stack(char **stack_a, char **stack_b);
-int	verify_string(char *str);
-//push_swap
-#endif
+	if (count == 0 || size == 0)
+	{
+		count = 1;
+		size = 1;
+	}
+	if (count > 2147483647 / size)
+		return (NULL);
+	total_size = count * size;
+	ptr = malloc(total_size);
+	if (ptr == NULL)
+		return (NULL);
+	while (total_size--)
+		((char *)ptr)[total_size] = 0;
+	return (ptr);
+}

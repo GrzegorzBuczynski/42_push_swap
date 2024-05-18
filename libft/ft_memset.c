@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 17:58:11 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/18 17:12:16 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/02/28 20:08:25 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/03/16 16:32:08 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-#include <stdlib.h>
-#include <unistd.h>
+void	*ft_memset(void *b, int c, size_t len)
+{
+	unsigned char	*ptr;
 
-
-char *load_string(char *argv);
-char *load_items(int argc,char **argv);
-int ft_printresult(char *result);
-char *sort_stack(char **stack_a, char **stack_b);
-int	verify_string(char *str);
-//push_swap
-#endif
+	ptr = (unsigned char *)b;
+	while (len > 0)
+	{
+		*(ptr++) = (unsigned char)c;
+		len--;
+	}
+	return (b);
+}
