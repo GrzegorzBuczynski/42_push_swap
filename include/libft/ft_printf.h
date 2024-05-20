@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 17:58:11 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/18 17:12:16 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/04/20 20:34:41 by agorski           #+#    #+#             */
+/*   Updated: 2024/05/20 19:48:30 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include <stdlib.h>
-#include <unistd.h>
+# include "libft.h"
+# include <stdarg.h>
+# include <unistd.h>
 
+int	ft_printf(const char *imput, ...);
+int	print_char(int c);
+int	print_string(char *str);
+int	print_digit(long n, int base);
+int	print_hexl(unsigned long int n);
+int	print_hexu(unsigned long int n);
+int	print_pointer(void *prt);
+int	print_unsigned(unsigned int n);
 
-char *load_string(char *argv);
-char *load_items(int argc,char **argv);
-int ft_printresult(char *result);
-char *sort_stack(char **stack_a, char **stack_b);
-int	verify_string(char *str);
-//push_swap
 #endif

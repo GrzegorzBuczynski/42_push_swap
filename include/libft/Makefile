@@ -6,7 +6,7 @@
 #    By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/10 17:48:12 by gbuczyns          #+#    #+#              #
-#    Updated: 2024/03/17 11:06:34 by gbuczyns         ###   ########.fr        #
+#    Updated: 2024/05/20 20:15:48 by gbuczyns         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,24 +60,34 @@ SRCB = ft_lstnew.c \
 	   ft_lstclear.c \
 	   ft_lstiter.c \
 	   ft_lstmap.c \
-	  
-
-CC = cc
+	   
+SRCD = ft_printf.c \
+	   ft_print_digit.c \
+	   ft_print_hexl.c \
+	   ft_print_hexu.c \
+	   ft_print_pointer.c \
+	   ft_print_string.c \
+	   ft_print_unsigned.c \
 
 OBJ = $(SRC:.c=.o)
 OBJB = $(SRCB:.c=.o)
+OBJD = $(SRCD:.c=.o)
+
+$(NAME): $(OBJ) $(OBJB) $(OBJD)
+	@ar rc $(NAME) $(OBJ) $(OBJB) $(OBJD)
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+libft: $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+bonus: $(OBJB)
+	@ar rc $(NAME) $(OBJB)
 
 clean:
 	@rm -f $(OBJ)
 	@rm -f $(OBJB)
+	@rm -f $(OBJD)
 	@echo "OBJ deleted"
 
 fclean: clean
@@ -85,8 +95,5 @@ fclean: clean
 	@echo "$(NAME) deleted"
 
 re: fclean all
-
-bonus: $(OBJB)
-	@ar rc $(NAME) $(OBJB)
 
 .PHONY: all, clean, fclean, re
