@@ -5,85 +5,70 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/10 18:56:40 by gbuczyns          #+#    #+#              #
-#    Updated: 2024/05/20 20:44:22 by gbuczyns         ###   ########.fr        #
+#    Created: 2024/05/25 23:16:05 by gbuczyns          #+#    #+#              #
+#    Updated: 2024/05/26 00:47:49 by gbuczyns         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+# Include directories
+INC = -Iinc
+INCLUDELIBFT = -Ilibft
 
+# Source files
+SRCS = src/errors_handle.c \
+       src/inti_nodes_a.c \
+       src/inti_nodes_b.c \
+       src/intial_condition_utils.c \
+       src/main.c \
+       src/push_swap.c \
+       src/push.c \
+       src/reverse_rotate.c \
+       src/rotate.c \
+       src/sort_stacks.c \
+       src/stack_init_utilis.c \
+       src/stack_init.c \
+       src/swap.c \
+       src/three_list_sort.c
+
+# Object files
+OBJ = $(SRCS:%.c=%.o)
+
+# Executable name
 NAME = push_swap
 
-# Directories 
-LIBTFDIR	= ./include/libft
-INC			= include/
-SRC_DIR		= src/
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+RM = rm -f
 
-# Compiler
-CC			= cc
-CFLAGS		= -Wall -Wextra -Werror
-
-# Source Files
-COMMANDS_DIR		= $(SRC_DIR)commands/push.c \
-					= $(SRC_DIR)commands/rev_rotate.c \
-					= $(SRC_DIR)commands/rotate.c \
-					= $(SRC_DIR)commands/sort_stacks.c \
-					= $(SRC_DIR)commands/sort_three.c \
-					= $(SRC_DIR)commands/swap.c \
-				
-PUSH_SWAP_DIR		= $(SRC_DIR)push_swap/handle_errors.c \
-					= $(SRC_DIR)push_swap/init_a_to_b.c \
-					= $(SRC_DIR)push_swap/init_b_to_a.c \
-					= $(SRC_DIR)push_swap/push_swap.c \
-					= $(SRC_DIR)push_swap/split.c \
-					= $(SRC_DIR)push_swap/stack_init.c \
-					= $(SRC_DIR)push_swap/stack_utils.c \
-
-
-
-
-LIBFTNAME= libft.a
-
-SRC = push_swap.c /
-
-
-OBJ= $(SRC:%.c=%.o)
-
-%.o: %.c
-	$(CC) $(CFLAGS) -o $@ -c $<
-
+# Default target
 all: $(NAME)
 
-$(NAME): libft $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+# Rule for building object files
+%.o: %.c
+	@echo "Compiling $< with includes: $(INC) $(INCLUDELIBFT)"
+	$(CC) $(CFLAGS) $(INC) $(INCLUDELIBFT) -c $< -o $@
 
+# Rule for building the executable
+$(NAME): $(OBJ) libft
+	$(CC) $(CFLAGS) $(INC) $(INCLUDELIBFT) -o $(NAME) $(OBJ) -Llibft -lft
+
+# Rule for building the libft library
 libft:
-	@make -C $(LIBTFDIR)
-	@cp $(LIBTFDIR)/$(LIBFTNAME) .
-	@mv $(LIBFTNAME) $(NAME)
+	make -C libft
 
+# Clean object files
 clean:
-	rm -f *.o
+	make clean -C libft
+	$(RM) $(OBJ)
 
-cleanlibft:
-	@make clean -C $(LIBTFDIR)
-
+# Clean object files and executable
 fclean: clean
-	rm -f $(NAME)
+	make fclean -C libft
+	$(RM) $(NAME)
 
-fcleanlibft:
-	@make fclean -C $(LIBTFDIR)
+# Rebuild everything
+re: fclean all
 
-allclean: clean cleanlibft
-
-allfclean: fclean fcleanlibft
-	rm a.out
-
-re: fclean fcleanlibft all
-
-testl:
-	nm libftprintf.a
-
-test:
-	cc ft_printf.c -L. -lftprintf
-
-.PHONY: all libft clean cleanlibft fclean fcleanlibft allclean allfclean re test testl
+# Phony targets
+.PHONY: all clean fclean re libft

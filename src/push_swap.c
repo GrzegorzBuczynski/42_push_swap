@@ -3,84 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
+/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 17:54:14 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/18 18:21:22 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/05/21 21:19:27 by pyathams          #+#    #+#             */
+/*   Updated: 2024/05/23 19:41:42 by pyathams         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
 #include "push_swap.h"
-#include <stdio.h>
 
-int	main(int argc, char **argv)
+void	min_on_top(t_stack_node **a)
 {
-	char	*stack_a;
-	char	*stack_b;
-	char	*result;
-
-	t_list *node1;
-	node1 = malloc(sizeof(t_list));
-
-	node1->content = 10;
-	node1->next = NULL;
-
-	if (argc < 2)
-		write(2, "Error\n", 6);
-	if (argc == 2)
+	while ((*a)->nbr != find_lowest(*a)->nbr)
 	{
-		stack_a = load_string(argv[1]);
-		// stack_a = argv[0];
-		// stack_b = argv[1];
-		printf("%p", stack_a);
-		write(2, "Erro2\n", 12);
-	}
-	// if (argc > 3)
-	// stack_a = load_items(argc, argv);
-	// if (!stack_a)
-	// write(2, "Error\n", 12);
-	// result = sort_stack(&stack_a, &stack_b);
-	// ft_printresult(result);
-	return (0);
-}
-
-char	**load_string(char *argv)
-{
-	char	**result;
-	// int		ret;
-	
-	// if(verify_string(argv))
-	// {
-	// 	ft_split(argv, ' ');
-	// }
-	// result = 0;
-	return (&result);
-}
-
-int	verify_string(char *str)
-{
-	while (*str)
-	{
-		if (ft_isdigit(*str) || *str == ' ')
-			str++;
+		if (find_lowest(*a)->above_median)
+			ra(a);
 		else
-			return (0);
+			rra(a);
 	}
-	return (1);
 }
 
-char	*load_items(int argc, char **argv)
+void	push_swap(t_stack_node **a, t_stack_node **b)
 {
-	return (0);
-}
+	int	len_stack_a;
 
-int	ft_printresult(char *result)
-{
-	return (0);
-}
-
-char	*sort_stack(char **stack_a, char **stack_b)
-{
-	return (0);
+	len_stack_a = stack_len(*a);
+	if (len_stack_a-- > 3 && !(sorted_stack(*a)))
+		pb(b, a);
+	if (len_stack_a-- > 3 && !(sorted_stack(*a)))
+		pb(b, a);
+	while (len_stack_a-- > 3 && !(sorted_stack(*a)))
+	{
+		inti_nodes_a(*a, *b);
+		move_a_to_b(a, b);
+	}
+	three_list_sort(a);
+	while (*b)
+	{
+		inti_nodes_b(*a, *b);
+		move_b_to_a(a, b);
+	}
+	current_index(*a);
+	min_on_top(a);
 }

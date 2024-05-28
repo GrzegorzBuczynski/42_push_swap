@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/20 20:34:41 by agorski           #+#    #+#             */
-/*   Updated: 2024/05/20 19:48:30 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/03/18 20:33:33 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/04 16:30:11 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-# include "libft.h"
-# include <stdarg.h>
+# include <fcntl.h>
+# include <stdlib.h>
 # include <unistd.h>
 
-int	ft_printf(const char *imput, ...);
-int	print_char(int c);
-int	print_string(char *str);
-int	print_digit(long n, int base);
-int	print_hexl(unsigned long int n);
-int	print_hexu(unsigned long int n);
-int	print_pointer(void *prt);
-int	print_unsigned(unsigned int n);
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
+char	*get_next_line(int fd);
+
+char	*ft_strchr(char *buffer, int c);
+int		ft_strlen(char *str);
+char	*ft_strjoin(char *buffer, char *temp_buffer);
 
 #endif

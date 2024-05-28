@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_digit.c                                   :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/12 15:55:37 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/12 17:26:19 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/05/26 02:02:46 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/26 02:02:49 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	print_digit(long n, int base)
-{
-	int		count;
-	char	*symbols;
+# include "libft.h"
+# include <stdarg.h>
+# include <unistd.h>
 
-	symbols = "0123456789abcdef";
-	count = 0;
-	if (n < 0)
-	{
-		write(1, "-", 1);
-		return (print_digit(-n, base) + 1);
-	}
-	else if (n < base)
-	{
-		return (print_char(symbols[n]));
-	}
-	else
-	{
-		count = print_digit(n / base, base);
-		return (count + print_digit(n % base, base));
-	}
-}
+int	ft_printf(const char *imput, ...);
+int	print_char(int c);
+int	print_string(char *str);
+int	print_digit(long n, int base);
+int	print_hexl(unsigned long int n);
+int	print_hexu(unsigned long int n);
+int	print_pointer(void *prt);
+int	print_unsigned(unsigned int n);
+
+#endif
