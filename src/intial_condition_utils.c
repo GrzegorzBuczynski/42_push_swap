@@ -6,7 +6,7 @@
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:11:16 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/06/01 19:03:30 by gbuczyns         ###   ########.fr       */
+/*   Updated: 2024/06/01 19:17:31 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	intial(char **argv, int argc, t_stack_node **a)
 
 	modified_argv = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return(0);
+		return (0);
 	else if (argc == 2)
 	{
 		modified_argv = ft_split(argv[1], ' ');

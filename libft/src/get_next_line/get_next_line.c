@@ -6,7 +6,7 @@
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 20:33:22 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/30 19:26:12 by gbuczyns         ###   ########.fr       */
+/*   Updated: 2024/06/01 19:13:37 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*read_to_buffer(char *buffer, int fd)
 			return (NULL);
 		}
 		temp[bytes] = '\0';
-		buffer = ft_strjoinGNL(buffer, temp);
+		buffer = ft_strjoin_gnl(buffer, temp);
 	}
 	free(temp);
 	return (buffer);
