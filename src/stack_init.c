@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 11:48:50 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/25 16:04:55 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/31 19:27:18 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 20:21:34 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 long long int	ft_atol(char *str)
 {
@@ -70,7 +70,7 @@ void	init_stack_a(t_stack_node **a, char **argv, int argc)
 	i = 0;
 	while (argv[i])
 	{
-		if (error_synatax(argv[i]))
+		if (error_syntax(argv[i]))
 			free_errors(a, argv, argc);
 		n = ft_atol(argv[i]);
 		if (n < INT_MIN || n > INT_MAX)

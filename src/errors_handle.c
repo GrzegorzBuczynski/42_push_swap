@@ -3,24 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   errors_handle.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 11:51:49 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/23 20:28:10 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/30 14:56:21 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 20:16:00 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
-int	error_synatax(char *str_n)
+int	error_syntax(char *str_n)
 {
-	if (!(*str_n == '+'
-			|| *str_n == '-'
-			|| (*str_n >= '0' && *str_n <= '9')))
+	if (!(*str_n == '+' || *str_n == '-' || (*str_n >= '0' && *str_n <= '9')))
 		return (1);
-	if ((*str_n == '+'
-			|| *str_n == '-')
-		&& !(str_n[1] >= '0' && str_n[1] <= '9'))
+	if ((*str_n == '+' || *str_n == '-') && !(str_n[1] >= '0'
+			&& str_n[1] <= '9'))
 		return (1);
 	while (*++str_n)
 	{
@@ -40,8 +37,8 @@ void	free_stack(t_stack_node **stack)
 	current = *stack;
 	while (current)
 	{
-		tmp = current -> next;
-		current ->nbr = 0;
+		tmp = current->next;
+		current->nbr = 0;
 		free(current);
 		current = tmp;
 	}
@@ -69,9 +66,9 @@ int	error_duplicate(t_stack_node *a, int n)
 		return (0);
 	while (a)
 	{
-		if (a -> nbr == n)
+		if (a->nbr == n)
 			return (1);
-		a = a -> next;
+		a = a->next;
 	}
 	return (0);
 }

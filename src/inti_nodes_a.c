@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   inti_nodes_a.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/22 14:07:46 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/25 16:57:15 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/30 21:37:43 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 17:15:06 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	current_index(t_stack_node *stack)
 {

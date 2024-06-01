@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 15:42:23 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/23 19:27:30 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/31 20:25:26 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 20:36:04 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 static void	reverse_rotate(t_stack_node **stack)
 {

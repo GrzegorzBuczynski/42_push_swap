@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_stacks.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/22 16:11:03 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/25 13:07:56 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/31 20:48:27 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 21:10:59 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	rotate_both(t_stack_node **a,
 						t_stack_node **b,

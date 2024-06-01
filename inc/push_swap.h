@@ -6,7 +6,7 @@
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/26 01:07:51 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/26 02:08:21 by gbuczyns         ###   ########.fr       */
+/*   Updated: 2024/05/31 20:16:00 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int						intial(char **argv, int argc, t_stack_node **a);
 void					free_split(char **split_result);
 
 //checking error during making stack from argment passing..
-int						error_synatax(char *str_n);
+int						error_syntax(char *str_n);
 void					free_stack(t_stack_node **stack);
 int						error_duplicate(t_stack_node *a, int n);
 void					free_errors(t_stack_node **a, char **argv, int argc);

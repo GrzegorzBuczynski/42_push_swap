@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init_utilis.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 11:45:45 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/23 19:42:36 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/31 21:11:34 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/06/01 16:10:18 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 t_stack_node	*find_last(t_stack_node *stack)
 {
@@ -24,7 +24,7 @@ t_stack_node	*find_last(t_stack_node *stack)
 bool	sorted_stack(t_stack_node *stack)
 {
 	if (!stack)
-		return (1);
+		return (true);
 	while (stack->next)
 	{
 		if (stack->nbr > stack->next->nbr)

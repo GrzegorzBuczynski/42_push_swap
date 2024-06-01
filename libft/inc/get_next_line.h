@@ -6,7 +6,7 @@
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 20:33:33 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/04 16:30:11 by gbuczyns         ###   ########.fr       */
+/*   Updated: 2024/06/01 16:12:22 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ char	*get_next_line(int fd);
 
 char	*ft_strchr(char *buffer, int c);
 int		ft_strlen(char *str);
-char	*ft_strjoin(char *buffer, char *temp_buffer);
+char	*ft_strjoinGNL(char *buffer, char *temp_buffer);
 
 #endif

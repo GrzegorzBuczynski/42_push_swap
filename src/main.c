@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 18:19:24 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/25 16:03:52 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/30 15:11:58 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 17:30:30 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int	main(int argc, char **argv)
 {

@@ -6,7 +6,7 @@
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 22:09:08 by gbuczyns          #+#    #+#             */
-/*   Updated: 2024/05/04 15:56:33 by gbuczyns         ###   ########.fr       */
+/*   Updated: 2024/05/30 19:26:09 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strchr(char *buffer, int c)
 	return (0);
 }
 
-char	*ft_strjoin(char *buff, char *temp)
+char	*ft_strjoinGNL(char *buff, char *temp)
 {
 	char	*str;
 	size_t	i;

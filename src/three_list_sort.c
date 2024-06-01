@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   three_list_sort.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 18:25:06 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/23 18:40:24 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/31 18:41:28 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 18:59:20 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 t_stack_node	*find_highest(t_stack_node *stack)
 {

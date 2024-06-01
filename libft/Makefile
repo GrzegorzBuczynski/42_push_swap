@@ -6,7 +6,7 @@
 #    By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/10 18:56:40 by gbuczyns          #+#    #+#              #
-#    Updated: 2024/05/26 01:46:42 by gbuczyns         ###   ########.fr        #
+#    Updated: 2024/06/01 16:52:33 by gbuczyns         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,7 @@ OBJ             = $(patsubst $(SRC_DIR)%.c,$(OBJ_DIR)%.o,$(SRC))
 
 # Compiler and flags
 CC              = gcc
-CFLAGS          = -Wall -Wextra -Werror -I$(INC)
+CFLAGS          = -Wall -Wextra -Werror -I$(INC) -g
 RM              = rm -f
 AR              = ar rcs
 

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 16:26:49 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/23 19:29:17 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/31 18:59:52 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 19:14:40 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 static void	swap(t_stack_node	**stack)
 {

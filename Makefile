@@ -6,7 +6,7 @@
 #    By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 23:16:05 by gbuczyns          #+#    #+#              #
-#    Updated: 2024/05/26 00:47:49 by gbuczyns         ###   ########.fr        #
+#    Updated: 2024/06/01 16:15:54 by gbuczyns         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ NAME = push_swap
 
 # Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 RM = rm -f
 
 # Default target

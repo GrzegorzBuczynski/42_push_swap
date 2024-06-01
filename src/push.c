@@ -3,36 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 11:42:58 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/23 20:37:04 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/31 17:42:10 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/31 17:56:52 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	push(t_stack_node **dest, t_stack_node **src)
 {
-	t_stack_node	*node_we_push;
+	t_stack_node	*node_to_push;
 
 	if (!*src)
 		return ;
-	node_we_push = *src;
+	node_to_push = *src;
 	*src = (*src)->next;
 	if (*src)
 		(*src)->prev = NULL;
-	node_we_push -> prev = NULL;
+	node_to_push -> prev = NULL;
 	if (!*dest)
 	{
-		*dest = node_we_push;
-		node_we_push -> next = NULL;
+		*dest = node_to_push;
+		node_to_push -> next = NULL;
 	}
 	else
 	{
-		node_we_push -> next = (*dest);
-		node_we_push -> next -> prev = node_we_push;
-		*dest = node_we_push;
+		node_to_push -> next = (*dest);
+		node_to_push -> next -> prev = node_to_push;
+		*dest = node_to_push;
 	}
 }
 

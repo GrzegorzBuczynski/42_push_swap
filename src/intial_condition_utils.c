@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 20:43:25 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/25 21:37:43 by gbuczyns         ###   ########.fr       */
+/*   Created: 2024/05/30 19:11:16 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/06/01 19:03:30 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 int	intial(char **argv, int argc, t_stack_node **a)
 {

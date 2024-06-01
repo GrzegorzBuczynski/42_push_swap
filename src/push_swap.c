@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pyathams <pyathams@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/21 21:19:27 by pyathams          #+#    #+#             */
-/*   Updated: 2024/05/23 19:41:42 by pyathams         ###   ########.fr       */
+/*   Created: 2024/05/30 14:59:19 by gbuczyns          #+#    #+#             */
+/*   Updated: 2024/05/30 21:35:28 by gbuczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	min_on_top(t_stack_node **a)
 {
