@@ -6,7 +6,7 @@
 #    By: gbuczyns <gbuczyns@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/25 23:16:05 by gbuczyns          #+#    #+#              #
-#    Updated: 2024/06/01 16:15:54 by gbuczyns         ###   ########.fr        #
+#    Updated: 2024/06/04 20:09:51 by gbuczyns         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,8 @@ OBJ = $(SRCS:%.c=%.o)
 # Executable name
 NAME = push_swap
 
+MY_LIBFT = ./libft/libft.a
+
 # Compiler and flags
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -g
@@ -50,11 +52,11 @@ all: $(NAME)
 	$(CC) $(CFLAGS) $(INC) $(INCLUDELIBFT) -c $< -o $@
 
 # Rule for building the executable
-$(NAME): $(OBJ) libft
+$(NAME): $(OBJ) $(MY_LIBFT)
 	$(CC) $(CFLAGS) $(INC) $(INCLUDELIBFT) -o $(NAME) $(OBJ) -Llibft -lft
 
 # Rule for building the libft library
-libft:
+$(MY_LIBFT):
 	make -C libft
 
 # Clean object files
